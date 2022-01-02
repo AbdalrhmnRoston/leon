@@ -22,3 +22,12 @@ function toggelActiveUl () {
     // Eficet Toggel Menu Icon
     document.querySelector('.icon span:nth-child(2)').classList.toggle('active-toggel');
 }
+
+// Close UL From Click Any Link
+let menuLinks = document.querySelectorAll('#my-links li');
+
+menuLinks.forEach((el) => {
+    el.addEventListener('click', () => {
+        el.parentElement.className = "";
+    })
+})
